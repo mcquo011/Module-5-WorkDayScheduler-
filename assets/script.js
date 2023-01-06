@@ -1,8 +1,31 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
-  // TODO: Add a listener for click events on the save button. This code should
+$(document).ready(function () {
+  // Select all save buttons
+  let saveButtons = $(".saveBtn");
+  // Add a click event listener to each save button
+  saveButtons.on("click", function (event) {
+    // The `this` keyword refers to the element that was clicked
+    let saveButton = $(this);
+    // Find the time-block element that contains the save button
+    let timeBlock = saveButton.closest(".time-block");
+    // Get the id of the time-block element (e.g. "hour-8")
+    let id = timeBlock.find(".hour").attr("id");
+    // Get the value of the description input field
+    let description = timeBlock.find(".description").val();
+    // Save the description in local storage using the id as the key
+    localStorage.setItem(id, description);
+    console.log(localStorage);
+  });
+
+  function Time() {
+      let currenTime = Date.now()
+      console.log(currenTime)
+  }
+
+  // TODO: Add a listener for click events on the save button
+  // This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
