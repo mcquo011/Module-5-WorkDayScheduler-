@@ -1,6 +1,11 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+let currentDate = dayjs(); // gets the current date
+let displayDate = $("#currentDay");
+displayDate.text(currentDate.format("MMM D, YYYY")); 
+
+
 $(document).ready(function () {
   // Select all save buttons
   let saveButtons = $(".saveBtn");
@@ -20,14 +25,11 @@ $(document).ready(function () {
     
   });
 
-function showCurrentDate() {
-  let currentDate = dayjs(); // gets the current date
-  let displayDate = $("#currentDay");
-  displayDate.text(currentDate.format("MMM D, YYYY")); 
-}
 
 
-  showCurrentDate()
+
+
+
   // TODO: Add a listener for click events on the save button
   // This code should
   // use the id in the containing time-block as a key to save the user input in
