@@ -25,7 +25,28 @@ $(document).ready(function () {
     
   });
 
+function trackTime() {
+  let currentHour = new Date().getHours();
+  console.log(currentHour)
+  let timeBlocks = $(".time-block");
+  console.log(timeBlocks.length)
 
+  timeBlocks.each(function () {
+    let time = $(this).attr('id').split('-')[1];
+    console.log($(this).attr("id").split("-")[1]);
+    if (currentHour === time) {
+      $(this).addClass("present");
+    } else if (currentHour < time) {
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    } else if (currentHour > time) {
+      $(this).removeClass("future");
+      $(this).addClass("past");
+    }
+  });
+}
+
+trackTime();
 
 
 
