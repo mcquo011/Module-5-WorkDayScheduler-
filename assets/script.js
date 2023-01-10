@@ -4,6 +4,7 @@
 let currentDate = dayjs(); // gets the current date
 let displayDate = $("#currentDay");
 displayDate.text(currentDate.format("MMM D, YYYY")); 
+let saveMessage = $("#message");
 
 
 $(document).ready(function () {
@@ -13,6 +14,12 @@ $(document).ready(function () {
   saveButtons.on("click", function (event) {
     // The `this` keyword refers to the element that was clicked
     let saveButton = $(this);
+    //display message?
+    saveMessage.text('Task has been saved');
+    setTimeout(function () {
+      // clear save message after two seconds
+      saveMessage.text = ("");
+    }, 2000);
     // Find the time-block element that contains the save button
     let timeBlock = saveButton.closest(".time-block");
     // Get the id of the time-block element (e.g. "hour-8")
@@ -45,10 +52,18 @@ function trackTime() {
     }
   });
 }
-
-
 trackTime();
 
+// work on this
+let timeBlocks = $(".time-block");
+timeBlocks.each(function () {
+  let timeBlock = $(this);
+  let id = timeBlock.find(".hour").attr("id");
+  let description = localStorage.getItem(id);
+  if (id === description) {
+    timeBlock.find(".description").val(description);
+  }
+});
 
 });
 
