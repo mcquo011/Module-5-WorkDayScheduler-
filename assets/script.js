@@ -27,18 +27,18 @@ $(document).ready(function () {
 
 function trackTime() {
   let currentHour = new Date().getHours();
-  console.log(currentHour)
+  console.log(currentHour);
   let timeBlocks = $(".time-block");
-  console.log(timeBlocks.length)
+  console.log(timeBlocks.length);
 
   timeBlocks.each(function () {
-    let time = $(this).attr('id').split('-')[1];
-    console.log($(this).attr("id").split("-")[1]);
-    if (currentHour === time) {
+    let time = $(this).attr("id").split("hour")[1];
+    console.log($(this).attr("id").split("hour")[1]);
+    if (currentHour == time) {
       $(this).addClass("present");
     } else if (currentHour < time) {
-        $(this).removeClass("present");
-        $(this).addClass("future");
+      $(this).removeClass("present");
+      $(this).addClass("future");
     } else if (currentHour > time) {
       $(this).removeClass("future");
       $(this).addClass("past");
@@ -46,10 +46,11 @@ function trackTime() {
   });
 }
 
+
 trackTime();
 
 
-
+});
 
   // TODO: Add a listener for click events on the save button
   // This code should
@@ -72,4 +73,4 @@ trackTime();
 
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+
