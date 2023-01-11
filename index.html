@@ -17,22 +17,23 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Kanit:wght@300&family=Permanent+Marker&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Kanit:wght@300&family=Permanent+Marker&family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Kanit:wght@300&family=Permanent+Marker&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&family=Kanit:wght@300&family=Permanent+Marker&family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
+
   </head>
 
   <body>
-    <header class="p-5 mb-4 border-3 border-bottom border-secondary text-center bg-dark text-white">
+    <header class="p-5 mb-4 border-3 border-bottom border-secondary border-info text-center bg-dark text-white">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
@@ -41,7 +42,7 @@
 
     <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary bg-dark border border-white text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+  Launch Instructions
 </button>
 
 <!-- Modal -->
@@ -52,12 +53,12 @@
         <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <p>Use this application to schedule your work day. Type in your task and click the save button</p>
+      <div class="modal-body inline-block">
+        <p>Use this application to schedule your work day. Type in your task and click the save button. If you want to clear your tasks, click the "clear tasks" button at the bottom</p>
         <ul>
           <li>Gray: past</li>
           <li>Blue: present</li>
-          <li>Purple: future</li>
+          <li>Green: future</li>
         </ul>
       </div>
       <div class="modal-footer">
@@ -156,6 +157,10 @@
         <button class="btn saveBtn col-2 col-md-1 bg-dark border border-info" aria-label="save">
           <i class="fas fa-save"></i>
         </button>
+      </div>
+
+      <div>
+        <button id="clear" class="btn btn-primary bg-dark my-2">Clear Tasks</button>
       </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
