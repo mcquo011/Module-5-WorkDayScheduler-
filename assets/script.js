@@ -10,11 +10,11 @@ $(document).ready(function () {
   let saveButtons = $(".saveBtn");
   // Add a click event listener to each save button
   saveButtons.on("click", function (event) {
-    // The `this` keyword refers to the element that was clicked
+  // `this` keyword refers to the element that was clicked
     let saveButton = $(this);
-    // Find the time-block element that contains the save button
+  // Find the time-block element that contains the save button
     let timeBlock = saveButton.closest(".time-block");
-    // Get the id of the time-block element (e.g. "hour-8")
+  // Get the id of the time-block element
   let id = timeBlock.attr("id");
     // Get the value of the description input field
     let description = timeBlock.find(".description").val();
@@ -39,7 +39,7 @@ $(document).ready(function () {
   })
 
 
-
+// Set classes to past, present, future
   function trackTime() {
     let currentHour = new Date().getHours();
     console.log(currentHour);

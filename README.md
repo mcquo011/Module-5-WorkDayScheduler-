@@ -6,6 +6,8 @@ This simple work day schedulier application will help users schedule tasks to be
 
 The motivation behind this project was to create an application that clearly shows the date, what time it is, and lets the user save tasks for the day. This project gave me experience using dayJS and jQuery to create a user friendly application. 
 
+[Deployed application](https://mcquo011.github.io/Module-5-WorkDayScheduler-/)
+
 ## Installation
 
 Cloned the application starter code from GitLab class repo using git clone.
