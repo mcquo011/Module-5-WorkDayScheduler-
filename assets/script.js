@@ -32,7 +32,7 @@ $(document).ready(function () {
   });
 
   clearTasks.on("click", function(event){
-    if (confirm("Are you sure you want to clear the high scores?")){
+    if (confirm("Are you sure you want to clear your tasks for the day?")){
       localStorage.clear();
       $(".time-block .description").val("");
     }
