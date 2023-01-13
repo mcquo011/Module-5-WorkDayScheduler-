@@ -1,7 +1,6 @@
 let currentDate = dayjs(); 
 let displayDate = $("#currentDay");
 displayDate.text(currentDate.format("MMM D, YYYY")); 
-let saveMessage = $("#message");
 let clearTasks = $("#clear")
 
 
