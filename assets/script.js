@@ -6,7 +6,6 @@ let clearTasks = $("#clear")
 
 
 $(document).ready(function () {
-  // Select all save buttons
   let saveButtons = $(".saveBtn");
   // Add a click event listener to each save button
   saveButtons.on("click", function (event) {
@@ -31,6 +30,7 @@ $(document).ready(function () {
     }
   });
 
+  // gives the user the option to clear all tasks
   clearTasks.on("click", function(event){
     if (confirm("Are you sure you want to clear your tasks for the day?")){
       localStorage.clear();
@@ -42,13 +42,11 @@ $(document).ready(function () {
 // Set classes to past, present, future
   function trackTime() {
     let currentHour = new Date().getHours();
-    console.log(currentHour);
     let timeBlocks = $(".time-block");
-    console.log(timeBlocks.length);
+   
 
     timeBlocks.each(function () {
       let time = $(this).attr("id").split("hour")[1];
-      console.log($(this).attr("id").split("hour")[1]);
       if (currentHour == time) {
         $(this).addClass("present");
       } else if (currentHour < time) {

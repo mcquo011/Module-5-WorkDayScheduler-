@@ -2,7 +2,7 @@
 
 ## Work Day Scheduler 
 
-This simple work day schedulier application will help users schedule tasks to be completed during a typical workday (8am-5pm). 
+This simple work day scheduler application will help users schedule tasks to be completed during a typical workday (8am-5pm). 
 
 The motivation behind this project was to create an application that clearly shows the date, what time it is, and lets the user save tasks for the day. This project gave me experience using dayJS and jQuery to create a user friendly application. 
 
