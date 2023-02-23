@@ -8,6 +8,13 @@ The motivation behind this project was to create an application that clearly sho
 
 [Deployed application](https://mcquo011.github.io/Module-5-WorkDayScheduler-/)
 
+## Built With
+
+* HTML
+* CSS
+* JavaScript
+* Local Storage
+
 ## Installation
 
 Cloned the application starter code from GitLab class repo using git clone.
